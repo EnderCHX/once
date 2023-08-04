@@ -1,12 +1,12 @@
 getImg = async () => {
-    res = (location.search).substring(1);
+    let res = (location.search).substring(1);
     return `https://img.chxc.cc${res}`;
 }
 
 delImg = async () => {
-    res = (location.search).substring(7);
+    let res = (location.search).substring(7);
     console.log(res);
-    rest = await fetch(`https://img.chxc.cc/api/manage/delete/${res}`);
+    let rest = await fetch(`https://img.chxc.cc/api/manage/delete/${res}`);
     return rest;
 }
 
@@ -15,8 +15,8 @@ getE = (id) =>{
 }
 
 main = async () => {
-    getE(img).src = await getImg();
-    rest = delImg();
+    getE("img").src = await getImg();
+    let rest = await delImg();
     console.log(rest);
 }
 
