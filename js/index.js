@@ -10,7 +10,7 @@ delImg = async () => {
     return rest;
 }
 
-getE = (id) =>{
+getE = (id) => {
     return document.getElementById(id);
 }
 
